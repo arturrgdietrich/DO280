@@ -1,1 +1,28 @@
 teste
+    1  oc get clusteroperators.config.openshift.io
+    2  oc login 
+    3  oc login https://master01.ocp4.example.com
+    4  oc login api.ocp4.example.com
+    5  clear
+    6  pwd
+   21  lab install-troubleshoot start
+   22  source /usr/local/etc/ocp4.config
+   23  oc login -u kubeadmin -p ${RHT_OCP4_KUBEADM_PASSWD} 
+   24  oc login -u kubeadmin -p ${RHT_OCP4_KUBEADM_PASSWD}  https://api.ocp4.example.com:6443
+   25  oc get nodes
+   29  mkdir DO280
+   30  cd DO280
+   31  ls -lrt
+   32  echo "# DO280" >> README.md
+   33  git init
+   34  git add README.md
+   35  git commit -m "first commit"
+   36  git branch -M main
+   37  gir remote add origin https://github.com/arturrgdietrich/DO280.git
+   39  git push -u origin main
+   40  gedit temp.txt
+   41  ls -lrt
+   42  git add .
+   43  git commit -m "arquivo temporario"
+   44  git push -u origin main
+   48  history >>temp.txt
